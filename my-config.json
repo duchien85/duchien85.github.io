@@ -1,2 +1,6 @@
 {
+  "BASE_URL": "https://sit-api.acb.com/mb/",
+  "BASE_URL_QR_PORTAL": "https://sit-qr.acb.com/",
+  "API_KEY": "xxxx",
+  "CLIENT_ID": "yyyy"
 }
