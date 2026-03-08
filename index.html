@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <title>Đếm Ngược Tết Nguyên Đán</title>
@@ -69,63 +69,65 @@
         }
     </style>
 </head>
-<body>
-<div class="container">
-    <h1>🎆 Đếm Ngược Tết Nguyên Đán 🎆</h1>
 
-    <div id="countdown">
-        <div class="time-box">
-            <span id="days">0</span>
-            <small>Ngày</small>
+<body>
+    <div class="container">
+        <h1>🎆 Đếm Ngược Tết Nguyên Đán 2027 🎆</h1>
+
+        <div id="countdown">
+            <div class="time-box">
+                <span id="days">0</span>
+                <small>Ngày</small>
+            </div>
+            <div class="time-box">
+                <span id="hours">0</span>
+                <small>Giờ</small>
+            </div>
+            <div class="time-box">
+                <span id="minutes">0</span>
+                <small>Phút</small>
+            </div>
+            <div class="time-box">
+                <span id="seconds">0</span>
+                <small>Giây</small>
+            </div>
         </div>
-        <div class="time-box">
-            <span id="hours">0</span>
-            <small>Giờ</small>
-        </div>
-        <div class="time-box">
-            <span id="minutes">0</span>
-            <small>Phút</small>
-        </div>
-        <div class="time-box">
-            <span id="seconds">0</span>
-            <small>Giây</small>
-        </div>
+
+        <p class="footer">✨ Chúc Mừng Năm Mới ✨</p>
     </div>
 
-    <p class="footer">✨ Chúc Mừng Năm Mới ✨</p>
-</div>
-
-<!--<script src="script.js"></script>-->
-<script>
-    function getNextLunarNewYear() {
-        // Tết Nguyên Đán 2026 (ví dụ: 06/02/2027)
-        return new Date("2027-02-06T00:00:00");
-    }
-
-    function updateCountdown() {
-        const tet = getNextLunarNewYear();
-        const now = new Date();
-        const diff = tet - now;
-
-        if (diff <= 0) {
-            document.getElementById("countdown").innerHTML =
-                "<h2>🎉 Chúc Mừng Năm Mới 🎉</h2>";
-            return;
+    <!--<script src="script.js"></script>-->
+    <script>
+        function getNextLunarNewYear() {
+            // Tết Nguyên Đán 2026 (ví dụ: 06/02/2027)
+            return new Date("2027-02-06T00:00:00");
         }
 
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-        const minutes = Math.floor((diff / (1000 * 60)) % 60);
-        const seconds = Math.floor((diff / 1000) % 60);
+        function updateCountdown() {
+            const tet = getNextLunarNewYear();
+            const now = new Date();
+            const diff = tet - now;
 
-        document.getElementById("days").innerText = days;
-        document.getElementById("hours").innerText = hours;
-        document.getElementById("minutes").innerText = minutes;
-        document.getElementById("seconds").innerText = seconds;
-    }
+            if (diff <= 0) {
+                document.getElementById("countdown").innerHTML =
+                    "<h2>🎉 Chúc Mừng Năm Mới 🎉</h2>";
+                return;
+            }
 
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
-</script>
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((diff / (1000 * 60)) % 60);
+            const seconds = Math.floor((diff / 1000) % 60);
+
+            document.getElementById("days").innerText = days;
+            document.getElementById("hours").innerText = hours;
+            document.getElementById("minutes").innerText = minutes;
+            document.getElementById("seconds").innerText = seconds;
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
 </body>
+
 </html>
